@@ -8,7 +8,8 @@ import { Input } from "@/components/ui/input"
 import { Skeleton } from "@/components/ui/skeleton"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { Lightbulb, RefreshCw, Sparkles, Send, User, Bot, TrendingDown, AlertTriangle, Flame } from "lucide-react"
+import { Lightbulb, RefreshCw, Sparkles, Send, User, Bot, TrendingDown, AlertTriangle } from "lucide-react"
+import { LPGLogo } from "@/components/ui/lpg-logo"
 import { getUsageHistory, getActiveCylinder } from "@/lib/firestore"
 import { calculateAnalytics, type AnalyticsData } from "@/lib/analytics"
 
@@ -201,7 +202,7 @@ export default function AISuggestionsPage() {
 
           {/* Efficiency Alert */}
           <Alert className={analytics.efficiencyScore >= 55 ? "border-green-500/50 bg-green-500/10" : "border-red-500/50 bg-red-500/10"}>
-            <Flame className={`h-4 w-4 ${analytics.efficiencyScore >= 55 ? "text-green-500" : "text-red-500"}`} />
+            <LPGLogo size="sm" />
             <AlertTitle className={analytics.efficiencyScore >= 55 ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"}>
               Efficiency Score: {analytics.efficiencyScore}/100
             </AlertTitle>

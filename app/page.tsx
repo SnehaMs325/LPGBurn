@@ -4,7 +4,8 @@ import { useUser } from "@civic/auth/react"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Flame, BarChart3, Lightbulb, TrendingUp, ArrowRight } from "lucide-react"
+import { BarChart3, Lightbulb, TrendingUp, ArrowRight } from "lucide-react"
+import { LPGLogo } from "@/components/ui/lpg-logo"
 import { getUserProfile, getUsageHistory, createUserProfile } from "@/lib/firestore"
 import { PreviousDataForm } from "@/components/onboarding/previous-data-form"
 
@@ -75,7 +76,7 @@ export default function LandingPage() {
   // Show loading state while checking user
   if (checkingUser) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background">
+      <div className="flex min-h-screen items-center justify-center bg-transparent">
         <div className="text-center">
           <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-primary border-t-transparent" />
           <p className="mt-4 text-muted-foreground">Setting up your account...</p>
@@ -85,13 +86,13 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-transparent">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-sm">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary glow-button">
-              <Flame className="h-5 w-5 text-primary-foreground" />
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg overflow-hidden glow-button">
+              <LPGLogo size="lg" />
             </div>
             <span className="text-xl font-semibold tracking-tight gradient-text">LPGBurn</span>
           </div>
@@ -177,7 +178,7 @@ export default function LandingPage() {
               description="See your efficiency rating from 0-100 based on consistency, trends, and overall performance."
             />
             <FeatureCard
-              icon={<Flame className="h-6 w-6" />}
+              icon={<LPGLogo size="lg" />}
               title="Cylinder Tracking"
               description="Monitor your active cylinder with estimated remaining days based on your historical usage data."
             />
@@ -225,7 +226,7 @@ export default function LandingPage() {
             <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
               <div className="flex items-center gap-2">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary glow-button">
-                  <Flame className="h-4 w-4 text-primary-foreground" />
+                  <LPGLogo size="sm" />
                 </div>
                 <span className="font-semibold gradient-text">LPGBurn</span>
               </div>

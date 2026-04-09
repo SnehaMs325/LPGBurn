@@ -136,13 +136,13 @@
 
 /* Premium Glass Card Styles */
 .glass-card {
-  @apply relative overflow-hidden rounded-2xl border border-primary/20 bg-card/80 backdrop-blur-xl;
+  @apply relative overflow-hidden rounded-2xl border border-primary/20 bg-card/60 backdrop-blur-xl;
   box-shadow: 0 0 20px rgba(239, 68, 68, 0.1);
   transition: all 0.3s ease;
 }
 
 .glass-card:hover {
-  @apply border-primary/40;
+  @apply border-primary/40 bg-card/70;
   box-shadow: 0 8px 32px rgba(239, 68, 68, 0.15);
   transform: translateY(-2px);
 }

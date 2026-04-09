@@ -1,7 +1,8 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { TrendingUp, TrendingDown, Minus, Flame, Calendar, BarChart3, AlertTriangle } from "lucide-react"
+import { TrendingUp, TrendingDown, Minus, Calendar, BarChart3, AlertTriangle } from "lucide-react"
+import { LPGLogo } from "@/components/ui/lpg-logo"
 import type { AnalyticsData } from "@/lib/analytics"
 
 interface AnalyticsCardsProps {
@@ -68,7 +69,7 @@ export function AnalyticsCards({ analytics }: AnalyticsCardsProps) {
       <Card className={`card-lift glass-card ${analytics.totalCylindersUsed > 2 ? "alert-high" : ""}`}>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">Total Cylinders</CardTitle>
-          <Flame className={`h-4 w-4 ${analytics.totalCylindersUsed > 2 ? "text-primary" : "text-muted-foreground"}`} />
+          <LPGLogo size="sm" />
         </CardHeader>
         <CardContent>
           <div className={`text-2xl font-bold ${analytics.totalCylindersUsed > 2 ? "stat-highlight" : ""}`}>

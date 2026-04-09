@@ -12,7 +12,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { Flame, Plus, X, ArrowRight, SkipForward } from "lucide-react"
+import { Plus, X, ArrowRight, SkipForward } from "lucide-react"
+import { LPGLogo } from "@/components/ui/lpg-logo"
 import { addUsageRecord, setActiveCylinder } from "@/lib/firestore"
 import { getMaxDaysForMonth } from "@/lib/date-utils"
 
@@ -128,7 +129,7 @@ export function PreviousDataForm({ userId, onComplete, onSkip }: PreviousDataFor
     <div className="mx-auto max-w-2xl space-y-6 p-4">
       <div className="text-center">
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-          <Flame className="h-8 w-8 text-primary" />
+          <LPGLogo size="lg" className="h-8 w-8" />
         </div>
         <h1 className="text-2xl font-bold">Welcome to LPGBurn!</h1>
         <p className="mt-2 text-muted-foreground">

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import { AuthProvider } from "@/components/auth/auth-provider"
+import { EntropyBackground } from "@/components/ui/entropy"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -55,7 +56,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="glow-bg" aria-hidden="true" />
+          <EntropyBackground opacity={0.85} />
           <AuthProvider>{children}</AuthProvider>
         </ThemeProvider>
         {process.env.NODE_ENV === "production" ? <Analytics /> : null}

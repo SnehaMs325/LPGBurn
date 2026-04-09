@@ -14,7 +14,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { Flame, Calendar } from "lucide-react"
+import { Calendar } from "lucide-react"
+import { LPGLogo } from "@/components/ui/lpg-logo"
 import { setActiveCylinder, type ActiveCylinder as ActiveCylinderType } from "@/lib/firestore"
 import { Timestamp } from "firebase/firestore"
 
@@ -82,7 +83,7 @@ export function ActiveCylinder({ userId, cylinder, averageDays, onUpdate }: Acti
       <Card className="card-lift glass-card">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Flame className="h-5 w-5 text-primary" />
+            <LPGLogo size="md" />
             <span className="gradient-text">Active Cylinder</span>
           </CardTitle>
           <CardDescription>Set up your current cylinder to track usage</CardDescription>
@@ -144,7 +145,7 @@ export function ActiveCylinder({ userId, cylinder, averageDays, onUpdate }: Acti
     <Card className="card-lift glass-card">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Flame className="h-5 w-5 text-primary" />
+          <LPGLogo size="md" />
           <span className="gradient-text">Active Cylinder</span>
         </CardTitle>
         <CardDescription>

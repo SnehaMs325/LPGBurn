@@ -23,7 +23,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Flame, LayoutDashboard, Lightbulb, Settings, LogOut, ChevronsUpDown, MapPin } from "lucide-react"
+import { LayoutDashboard, Lightbulb, Settings, LogOut, ChevronsUpDown, MapPin } from "lucide-react"
+import { LPGLogo } from "@/components/ui/lpg-logo"
 
 const navItems = [
   {
@@ -62,14 +63,14 @@ export function AppSidebar() {
     : "U"
 
   return (
-    <Sidebar>
+    <Sidebar className="bg-sidebar/80 backdrop-blur-xl border-r border-border/50">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <Link href="/dashboard">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary glow-button">
-                  <Flame className="h-4 w-4 text-primary-foreground" />
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg overflow-hidden glow-button">
+                  <LPGLogo size="lg" />
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
                   <span className="font-semibold gradient-text">LPGBurn</span>

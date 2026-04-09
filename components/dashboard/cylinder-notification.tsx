@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Bell, Flame, CheckCircle } from "lucide-react"
+import { Bell, CheckCircle } from "lucide-react"
+import { LPGLogo } from "@/components/ui/lpg-logo"
 import {
   getCylinderNotification,
   setCylinderNotification,
@@ -115,7 +116,7 @@ export function CylinderNotification({ userId, onCylinderChange }: CylinderNotif
           disabled={isResponding}
           className="flex-1 gap-2"
         >
-          <Flame className="h-4 w-4" />
+          <LPGLogo size="sm" />
           Yes, New Cylinder
         </Button>
         <Button
