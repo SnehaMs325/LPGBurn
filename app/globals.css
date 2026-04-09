@@ -1,0 +1,279 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Premium Dark Red LPG Theme - Light Mode */
+  --background: oklch(0.97 0.005 15);
+  --foreground: oklch(0.15 0.02 15);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.02 15);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.02 15);
+  /* Primary: Vibrant red like LPG flame */
+  --primary: oklch(0.58 0.22 25);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.95 0.01 15);
+  --secondary-foreground: oklch(0.25 0.02 15);
+  --muted: oklch(0.94 0.008 15);
+  --muted-foreground: oklch(0.45 0.015 15);
+  /* Accent: Light red */
+  --accent: oklch(0.68 0.18 25);
+  --accent-foreground: oklch(0.15 0.02 15);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.9 0.01 15);
+  --input: oklch(0.92 0.008 15);
+  --ring: oklch(0.58 0.22 25);
+  /* Chart colors */
+  --chart-1: oklch(0.58 0.22 25);
+  --chart-2: oklch(0.68 0.18 25);
+  --chart-3: oklch(0.65 0.15 55);
+  --chart-4: oklch(0.55 0.12 145);
+  --chart-5: oklch(0.6 0.16 35);
+  --radius: 1rem;
+  /* Sidebar */
+  --sidebar: oklch(0.97 0.005 15);
+  --sidebar-foreground: oklch(0.15 0.02 15);
+  --sidebar-primary: oklch(0.58 0.22 25);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.94 0.02 20);
+  --sidebar-accent-foreground: oklch(0.25 0.02 15);
+  --sidebar-border: oklch(0.9 0.01 15);
+  --sidebar-ring: oklch(0.58 0.22 25);
+}
+
+.dark {
+  /* Premium Dark Mode - Deep black with red accents */
+  --background: oklch(0.1 0.01 15);
+  --foreground: oklch(0.92 0.01 15);
+  --card: oklch(0.14 0.015 15);
+  --card-foreground: oklch(0.92 0.01 15);
+  --popover: oklch(0.14 0.015 15);
+  --popover-foreground: oklch(0.92 0.01 15);
+  /* Primary: Bright red for dark mode */
+  --primary: oklch(0.63 0.24 25);
+  --primary-foreground: oklch(0.1 0.01 15);
+  --secondary: oklch(0.18 0.015 15);
+  --secondary-foreground: oklch(0.92 0.01 15);
+  --muted: oklch(0.2 0.012 15);
+  --muted-foreground: oklch(0.6 0.01 15);
+  /* Accent: Light red glow */
+  --accent: oklch(0.7 0.2 25);
+  --accent-foreground: oklch(0.1 0.01 15);
+  --destructive: oklch(0.55 0.24 25);
+  --destructive-foreground: oklch(0.95 0 0);
+  --border: oklch(0.22 0.02 20);
+  --input: oklch(0.18 0.015 15);
+  --ring: oklch(0.63 0.24 25);
+  /* Chart colors: Vibrant reds and complementary */
+  --chart-1: oklch(0.63 0.24 25);
+  --chart-2: oklch(0.7 0.2 25);
+  --chart-3: oklch(0.7 0.15 55);
+  --chart-4: oklch(0.6 0.12 145);
+  --chart-5: oklch(0.65 0.18 35);
+  /* Sidebar: Deep dark with red highlights */
+  --sidebar: oklch(0.12 0.015 15);
+  --sidebar-foreground: oklch(0.92 0.01 15);
+  --sidebar-primary: oklch(0.63 0.24 25);
+  --sidebar-primary-foreground: oklch(0.1 0.01 15);
+  --sidebar-accent: oklch(0.2 0.025 20);
+  --sidebar-accent-foreground: oklch(0.92 0.01 15);
+  --sidebar-border: oklch(0.22 0.02 20);
+  --sidebar-ring: oklch(0.63 0.24 25);
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Premium Glass Card Styles */
+.glass-card {
+  @apply relative overflow-hidden rounded-2xl border border-primary/20 bg-card/80 backdrop-blur-xl;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  @apply border-primary/40;
+  box-shadow: 0 8px 32px rgba(239, 68, 68, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Glow Button Styles */
+.glow-button {
+  @apply relative overflow-hidden bg-gradient-to-r from-red-700 to-red-500 text-white font-semibold;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+  transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.6);
+  transform: scale(1.02);
+}
+
+/* Input Focus Glow */
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3);
+}
+
+/* Red Glow Background Effect */
+.glow-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(239, 68, 68, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(239, 68, 68, 0.1), transparent);
+}
+
+/* Progress Bar Gradient */
+.progress-gradient {
+  @apply rounded-full;
+  background: linear-gradient(90deg, #dc2626, #ef4444, #f87171);
+}
+
+/* Alert Indicators */
+.alert-high {
+  @apply border-l-4 border-l-red-500 bg-red-500/10;
+}
+
+.alert-medium {
+  @apply border-l-4 border-l-orange-500 bg-orange-500/10;
+}
+
+.alert-low {
+  @apply border-l-4 border-l-green-500 bg-green-500/10;
+}
+
+/* Live Indicator */
+.live-indicator {
+  @apply inline-flex items-center gap-2;
+}
+
+.live-dot {
+  @apply h-2 w-2 rounded-full bg-red-500;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 4px rgba(239, 68, 68, 0.4);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-primary/40;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/60;
+}
+
+/* Card Hover Lift Effect */
+.card-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(239, 68, 68, 0.2);
+}
+
+/* Smooth Transitions */
+.smooth-transition {
+  transition: all 0.3s ease;
+}
+
+/* Gradient Text */
+.gradient-text {
+  @apply bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent;
+}
+
+/* Efficiency Score Ring */
+.efficiency-ring {
+  filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.5));
+}
+
+/* Dark Mode Card Enhancements */
+.dark .card-enhanced {
+  @apply border-primary/20 bg-card/90 backdrop-blur-sm;
+  box-shadow: 
+    0 0 1px rgba(255, 255, 255, 0.1),
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    inset 0 0 20px rgba(239, 68, 68, 0.03);
+}
+
+/* Stat Card Highlight */
+.stat-highlight {
+  @apply text-primary font-bold;
+  text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+}
